@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cihuyyyy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="logodz.png" alt=""></a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <nav class="navbar">
+      <a href="https://discord.com" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+      <a href="https://youtube.com" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <video autoplay loop muted playsinline>
+      <source src="background_velocity.mp4" type="video/mp4">
+    </video>
+    <div class="biolink-container">
+      <img src="profildeedadz.jpg" alt="Foto Profil" class="profile-img">
+      <h1 class="name">Deedadz</h1>
+      <p class="bio">glad to know you</p>
+      <div class="links">
+        <a href="https://discordapp.com/users/1229637082897715240" target="_blank" class="link discord">Discord</a>
+        <a href="https://www.youtube.com/@deedadz" target="_blank" class="link youtube">YouTube</a>
+        <a href="https://www.tiktok.com/@amatdzz?is_from_webapp=1&sender_device=pc" target="_blank" class="link tiktok">TikTok</a>
+        <a href="https://github.com/Dforzz" target="_blank" class="link github">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Musik -->
+  <audio id="bg-music" autoplay loop>
+    <source src="tabolabale.mp3" type="audio/mp3">
+  </audio>
+  <button id="music-btn"><i class="fas fa-volume-up"></i></button>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("music-btn");
+    const icon = btn.querySelector("i");
+
+    // coba autoplay (di mobile biasanya diblokir)
+    music.play().catch(() => {
+      console.log("Autoplay diblokir di mobile, tunggu interaksi user");
+    });
+
+    btn.addEventListener("click", () => {
+      if (music.muted) {
+        music.muted = false;
+        icon.classList.remove("fa-volume-mute");
+        icon.classList.add("fa-volume-up");
+      } else {
+        music.muted = true;
+        icon.classList.remove("fa-volume-up");
+        icon.classList.add("fa-volume-mute");
+      }
+    });
+  </script>
+</body>
+</html>
