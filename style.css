@@ -8,11 +8,11 @@
 
 /* Cursor global */
 body {
-  cursor: url('cursorplankton.png') 16 16, auto;
+  cursor: url('cursor.png') 16 16, auto;
 }
 
 a, button, .link {
-  cursor: url('cursorplankton.png') 16 16, pointer;
+  cursor: url('cursor.png') 16 16, pointer;
 }
 
 html, body {
