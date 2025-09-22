@@ -63,6 +63,7 @@ html, body {
   max-width: 700px;
   padding: 75px 80px;
   background: rgba(206, 202, 202, 0.15);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   text-align: center;
@@ -158,6 +159,7 @@ header {
   color: #fff;
   font-size: 20px;
   box-shadow: 0 0 10px rgb(201, 198, 198), 0 0 20px rgb(183,185,185);
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 
